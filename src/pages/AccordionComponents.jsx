@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import { accordioData } from "../components/common/Helper";
 
 const AccordionComponents = () => {
@@ -40,8 +40,8 @@ const AccordionComponents = () => {
               </button>
               <div
                 className={`${
-                  accordion === index ? "max-h-36 " : "max-h-0 "
-                } accrdion-heading overflow-hidden    !duration-300 transition-[max-height]`}
+                  accordion === index ? "max-h-[528px] " : "max-h-0 "
+                } accrdion-heading overflow-hidden  pr-10   !duration-300 transition-[max-height]`}
               >
                 <p className="text-black  font-normal text-base font-Exo">
                   {obj.content}

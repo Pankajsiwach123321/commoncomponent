@@ -58,8 +58,7 @@ const Slidescomponents = () => {
           }}
           pagination={{ clickable: true }}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper  w-full py-[50px]"
-        >
+          className="mySwiper  w-full py-[50px]">
           <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-1.jpg"

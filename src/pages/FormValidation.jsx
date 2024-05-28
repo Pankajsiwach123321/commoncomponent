@@ -74,7 +74,7 @@ const FormValidation = () => {
         <form className=" flex-col  flex gap-3" onSubmit={clg}>
           <input
             onChange={inputCon}
-            type="name"
+            type="text"
             placeholder="name"
             name="name"
             value={formdata.name}
