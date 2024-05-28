@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SlideBar from "../SideBar";
 import { NavData } from "./Helper";
@@ -10,7 +9,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav className="bg-black py-5">
+      <nav className="bg-black py-5 sticky top-0">
         <div className="max-w-[1140px] mx-auto px-3">
           <div className=" flex justify-between items-center">
             <button

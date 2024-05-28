@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const FromValidation = () => {
+const FormValidation = () => {
   const [pop, setPop] = useState(false);
-  const [fromdata, setFromdata] = useState({
+  const [formdata, setFormdata] = useState({
     name: "",
     number: "",
     password: "",
@@ -16,7 +16,7 @@ const FromValidation = () => {
   });
   const inputCon = (e) => {
     const { name, value } = e.target;
-    setFromdata({ ...fromdata, [name]: value });
+    setFormdata({ ...formdata, [name]: value });
   };
   const clg = (e) => {
     e.preventDefault();
@@ -29,24 +29,24 @@ const FromValidation = () => {
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@])[a-zA-Z\d@]{8,}$/,
     };
     const error = {};
-    if (!regex.name.test(fromdata.name)) {
+    if (!regex.name.test(formdata.name)) {
       error.name = "invaild name";
     }
-    if (!regex.number.test(fromdata.number)) {
+    if (!regex.number.test(formdata.number)) {
       error.number = "invaild number";
     }
-    if (!regex.password.test(fromdata.password)) {
+    if (!regex.password.test(formdata.password)) {
       error.password = "invaild password";
     }
-    if (!regex.confirmpassword.test(fromdata.confirmpassword)) {
+    if (!regex.confirmpassword.test(formdata.confirmpassword)) {
       error.confirmpassword = "invaild confirmPassword";
     }
-    if (fromdata.password !== fromdata.confirmpassword) {
+    if (formdata.password !== formdata.confirmpassword) {
       error.confirmpassword = "Passwords do not match.";
     }
     setFromerror(error);
     if (Object.keys(error).length === 0) {
-      setFromdata({
+      setFormdata({
         name: "",
         number: "",
         password: "",
@@ -62,7 +62,7 @@ const FromValidation = () => {
     }
   };
   return (
-    <div className=" min-h-screen px-3 w-full  flex justify-center items-center">
+    <div className="flex-grow items-center flex ">
       <div
         className={`${
           pop ? " blur-lg" : "blur-0"
@@ -77,7 +77,7 @@ const FromValidation = () => {
             type="name"
             placeholder="name"
             name="name"
-            value={fromdata.name}
+            value={formdata.name}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.name && <p className=" text-red-700">{Fromerror.name}</p>}
@@ -86,7 +86,7 @@ const FromValidation = () => {
             type="number"
             placeholder="number"
             name="number"
-            value={fromdata.number}
+            value={formdata.number}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.number && (
@@ -97,7 +97,7 @@ const FromValidation = () => {
             type="password"
             placeholder="password"
             name="password"
-            value={fromdata.password}
+            value={formdata.password}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.password && (
@@ -108,7 +108,7 @@ const FromValidation = () => {
             type="password"
             placeholder="confirm password"
             name="confirmpassword"
-            value={fromdata.confirmpassword}
+            value={formdata.confirmpassword}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.confirmpassword && (
@@ -138,4 +138,4 @@ const FromValidation = () => {
   );
 };
 
-export default FromValidation;
+export default FormValidation;
