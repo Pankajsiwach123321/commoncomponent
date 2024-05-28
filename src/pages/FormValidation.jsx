@@ -78,7 +78,7 @@ const FormValidation = () => {
             placeholder="name"
             name="name"
             value={formdata.name}
-            className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
+            className="border-2 rounded-md capitalize font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.name && <p className=" text-red-700">{Fromerror.name}</p>}
           <input

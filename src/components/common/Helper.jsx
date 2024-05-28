@@ -12,7 +12,7 @@ export const NavData = [
     to: "/slider",
   },
   {
-    title: "FROM",
+    title: "FORM",
     to: "/from",
   },
 ];
