@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { accordioData } from "../components/common/Helper";
 
 const AccordionComponents = () => {
-  const contentHeight = useRef();
   const [accordion, setAccordion] = useState(false);
   const showContent = (index) => {
     setAccordion(index);
@@ -17,11 +16,11 @@ const AccordionComponents = () => {
           {accordioData.map((obj, index) => (
             <div
               key={index}
-              className="accordion-items mb-5 border duration-300 px-3 pb-1 border-black  rounded-xl"
+              className="accordion-items mb-5 border  px-3  py-3  border-black  rounded-xl"
             >
               <button
                 onClick={() => showContent(index)}
-                className="accordion-heading duration-300  py-3    flex justify-between gap-5 w-full items-center "
+                className="accordion-heading  flex justify-between gap-5 w-full items-center "
               >
                 <h2
                   className={`${
@@ -40,21 +39,11 @@ const AccordionComponents = () => {
                 </div>
               </button>
               <div
-                ref={contentHeight}
-                style={
-                  accordion === index
-                    ? {
-                        height: contentHeight.current.scrollHeight,
-                        opacity: 100,
-                      }
-                    : {
-                        height: "0px",
-                        opacity: 0,
-                      }
-                }
-                className={`accrdion-heading    h-0 !duration-300 transition-all`}
+                className={`${
+                  accordion === index ? "max-h-36 " : "max-h-0 "
+                } accrdion-heading overflow-hidden    !duration-300 transition-[max-height]`}
               >
-                <p className="text-black duration-300 font-normal text-base font-Exo">
+                <p className="text-black  font-normal text-base font-Exo">
                   {obj.content}
                 </p>
               </div>

@@ -17,7 +17,7 @@ const SlideBar = () => {
               className={`${
                 location.pathname === `${obj.to}` &&
                 "webkitstrokes  after:!w-full"
-              } font-Exo relative after:absolute after:bg-[#b1ff57]  after:bottom-[-6px] after:w-0 after:left-0 after:duration-300 after:h-[3px] text-lg leading-normal font-normal text-black mynavhover webkitstroke`}
+              } font-Exo relative after:absolute after:bg-[#b1ff57]  after:bottom-[-6px] after:w-0 after:left-0 after:duration-300 after:h-[3px] text-lg leading-normal font-normal text-black  webkitstroke`}
             >
               {obj.title}
             </Link>

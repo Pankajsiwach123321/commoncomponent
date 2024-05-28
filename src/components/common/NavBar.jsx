@@ -2,10 +2,21 @@ import { Link, useLocation } from "react-router-dom";
 import SlideBar from "../SideBar";
 import { NavData } from "./Helper";
 import { Slider_Bar } from "./Hooks";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 const NavBar = () => {
   const location = useLocation();
   const [sideBar, setsideBar] = Slider_Bar();
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      ".navlink",
+      { y: "-200%", duration: 0.2 },
+      { y: 0, duration: 0.2, stagger: 0.2 },
+      "+=2"
+    );
+  }, []);
 
   return (
     <header>
@@ -36,13 +47,13 @@ const NavBar = () => {
             </button>
             <ul className="flex items-center max-sm:hidden gap-5">
               {NavData.map((obj, index) => (
-                <li key={index}>
+                <li key={index} className="navlink">
                   <Link
                     to={obj.to}
                     className={`${
                       location.pathname === `${obj.to}` &&
                       "webkitstrokes  after:!w-full"
-                    } font-Exo relative after:absolute after:bg-[#b1ff57]  after:bottom-[-6px] after:w-0 after:left-0 after:duration-300 after:h-[3px] text-lg leading-normal font-normal text-white mynavhover webkitstroke`}
+                    } font-Exo relative after:absolute after:bg-[#b1ff57]  after:bottom-[-6px] after:w-0 after:left-0 after:duration-300 after:h-[3px] text-lg leading-normal font-normal  text-white  webkitstroke`}
                   >
                     {obj.title}
                   </Link>

@@ -21,13 +21,13 @@ export const accordioData = [
     active: 0,
     title: "What is PulseChain?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, aliquid?",
+      "Artificial Intelligence refers to the development of computer systems that can perform tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding.",
   },
   {
     active: 1,
     title: "What is a Subnet?",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
+      "Lorem ipsum dolor sit amet, dkfjsdkjfhksdhf  dsjfhdsjfbsdmn nbdfjhvfna  vdfnavfd amndamd consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.",
   },
   {
     active: 2,
