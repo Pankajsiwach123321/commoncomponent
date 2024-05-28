@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/common/NavBar';
 import TabComponent from './pages/TabComponent';
 import FromValidation from './pages/FromValidation';
+import Slidescomponents from './pages/Slidescomponents';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<TabComponent />} />
         <Route path="/accordion" element='' />
-        <Route path="/slider" element='' />
+        <Route path="/slider" element={<Slidescomponents />} />
         <Route path="/from" element={<FromValidation />} />
       </Routes>
     </div>

@@ -1,15 +1,18 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NavData } from "./common/Helper";
+import { Slider_Bar } from "./common/Hooks";
 
 const SlideBar = () => {
   const location = useLocation();
+  const [sideBar, setsideBar] = Slider_Bar();
   return (
-    <div className="min-h-screen flex justify-center w-full ">
-      <ul className="flex w-full flex-col items-center justify-center gap-5 h-full">
+    <div className="min-h-screen flex  w-full ">
+      <ul className={`${sideBar} flex w-full flex-col  gap-5 h-full`}>
         {NavData.map((obj, index) => (
           <li key={index}>
             <Link
+              onClick={() => setsideBar(!sideBar)}
               to={obj.to}
               className={`${
                 location.pathname === `${obj.to}` &&

@@ -2,17 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SlideBar from "../SideBar";
 import { NavData } from "./Helper";
+import { Slider_Bar } from "./Hooks";
 
 const NavBar = () => {
   const location = useLocation();
-  const [sideBar, setsideBar] = useState(false);
-  useEffect(() => {
-    if (sideBar) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [sideBar]);
+  const [sideBar, setsideBar] = Slider_Bar();
 
   return (
     <header>
@@ -41,7 +35,7 @@ const NavBar = () => {
                 } w-5 bg-white h-[2px] block duration-300`}
               ></span>
             </button>
-            <ul className="flex items-center gap-5">
+            <ul className="flex items-center max-sm:hidden gap-5">
               {NavData.map((obj, index) => (
                 <li key={index}>
                   <Link
@@ -62,7 +56,7 @@ const NavBar = () => {
       <aside
         className={`${
           sideBar && "!left-0"
-        } max-w-[400px] w-full bg-white min-h-screen flex fixed top-0 left-[-400px] z-[3] duration-300`}
+        } px-10 pt-20 bg-white min-h-screen flex fixed top-0 left-[-400px] z-[3] duration-300`}
       >
         <button
           className=" flex absolute right-5 top-5 gap-1 flex-col"
@@ -71,17 +65,17 @@ const NavBar = () => {
           <span
             className={` ${
               sideBar && "translate-x-[1px] translate-y-[8px] rotate-45"
-            } w-10 bg-black h-[2px] block duration-300`}
+            } w-[30px] bg-black h-[2px] block duration-300`}
           ></span>
           <span
             className={` ${
               sideBar && "opacity-0"
-            } w-10 bg-black h-[2px] block duration-300`}
+            } w-[30px] bg-black h-[2px] block duration-300`}
           ></span>
           <span
             className={` ${
               sideBar && "translate-x-[2px] translate-y-[-3px] -rotate-45"
-            } w-10 bg-black h-[2px] block duration-300`}
+            } w-[30px] bg-black h-[2px] block duration-300`}
           ></span>
         </button>
         <SlideBar />

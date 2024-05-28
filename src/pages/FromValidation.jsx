@@ -68,7 +68,7 @@ const FromValidation = () => {
           pop ? " blur-lg" : "blur-0"
         } border rounded-xl p-10 w-full max-w-[900px] mx-auto  duration-300  inline-block`}
       >
-        <h1 className="text-white mb-3 font-black text-center text-3xl">
+        <h1 className="text-white mb-3 font-black text-center font-Exo  text-3xl">
           Form Validation
         </h1>
         <form className=" flex-col  flex gap-3" onSubmit={clg}>
@@ -78,7 +78,7 @@ const FromValidation = () => {
             placeholder="name"
             name="name"
             value={fromdata.name}
-            className="border-2 rounded-xl p-2 border-blue-300 text-gray-900 outline-none"
+            className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.name && <p className=" text-red-700">{Fromerror.name}</p>}
           <input
@@ -87,7 +87,7 @@ const FromValidation = () => {
             placeholder="number"
             name="number"
             value={fromdata.number}
-            className="border-2 rounded-xl p-2 border-blue-300 text-gray-900 outline-none"
+            className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.number && (
             <p className=" text-red-700">{Fromerror.number}</p>
@@ -98,7 +98,7 @@ const FromValidation = () => {
             placeholder="password"
             name="password"
             value={fromdata.password}
-            className="border-2 rounded-xl p-2 border-blue-300 text-gray-900 outline-none"
+            className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.password && (
             <p className=" text-red-700">{Fromerror.password}</p>
@@ -109,13 +109,16 @@ const FromValidation = () => {
             placeholder="confirm password"
             name="confirmpassword"
             value={fromdata.confirmpassword}
-            className="border-2 rounded-xl p-2 border-blue-300 text-gray-900 outline-none"
+            className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
           {Fromerror.confirmpassword && (
             <p className=" text-red-700">{Fromerror.confirmpassword}</p>
           )}
 
-          <input className="bg-blue-500 cursor-pointer p-3" type="submit" />
+          <input
+            className="text-black font-Exo cursor-pointer text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-white rounded-3xl mt-5 hover:text-red-400 duration-300"
+            type="submit"
+          />
         </form>
       </div>
       <div

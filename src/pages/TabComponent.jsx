@@ -9,7 +9,7 @@ const TabComponent = () => {
     <section className="mt-10">
       <div className="max-w-[1140px] mx-auto px-3">
         <div>
-          <div className=" flex gap-5 items-center mb-5">
+          <div className=" flex gap-2 sm:gap-5 items-center mb-5">
             <button
               onClick={() => changetab("tab1")}
               className={`${
@@ -37,42 +37,27 @@ const TabComponent = () => {
           </div>
           <div
             className={` ${
-              Tabs === "tab1"
-                ? " scale-y-100 origin-top h-full duration-500 visible "
-                : " invisible h-0 scale-y-0 "
-            } text-white font-exo
+              Tabs === "tab1" ? " block h-full " : " hidden h-0  "
+            } text-white font-exo duration-300
                 `}
           >
             content1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Pariatur hic repellendus fugiat est quo! Veniam, necessitatibus! Ea
             reprehenderit ex illo molestias voluptatum deserunt soluta. Nemo
-            voluptates, nobis optio vero ipsa itaque ratione in quis, provident
-            nam illo voluptatum fugit labore quod asperiores cum magni sequi.
-            Aliquid dignissimos odio, accusamus nam placeat soluta cum omnis
-            itaque sequi voluptatibus officiis minus temporibus quas aliquam
-            pariatur nihil explicabo? Obcaecati adipisci dolor dolore. At
-            accusamus earum cupiditate cum! Dolorum suscipit odit, facilis quos
-            iure velit qui, omnis praesentium veritatis doloremque aperiam!
+            doloremque aperiam!
             Dolorum odit quia culpa necessitatibus eos maxime non odio iusto.
             Dolore, esse provident?
           </div>
 
           <div
-            className={` ${
-              Tabs === "tab2"
-                ? " scale-y-100 origin-top h-full duration-500 visible "
-                : " invisible h-0 scale-y-0 "
-            }
-               text-white font-exo `}
+            className={` ${Tabs === "tab2" ? " block h-full " : " hidden h-0  "}
+               text-white font-exo duration-300 `}
           >
             content2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Pariatur hic repellendus fugiat est quo! Veniam, necessitatibus! Ea
             reprehenderit ex illo molestias voluptatum deserunt soluta. Nemo
             voluptates, nobis optio vero ipsa itaque ratione in quis, provident
-            nam illo voluptatum fugit labore quod asperiores cum magni sequi.
-            Aliquid dignissimos odio, accusamus nam placeat soluta cum omnis
-            itaque sequi voluptatibus officiis minus temporibus quas aliquam
-            pariatur nihil explicabo? Obcaecati adipisci dolor dolore. At
+            nam illo vol? Obcaecati adipisci dolor dolore. At
             accusamus earum cupiditate cum! Dolorum suscipit odit, facilis quos
             iure velit qui, omnis praesentium veritatis doloremque aperiam!
             Dolorum odit quia culpa necessitatibus eos maxime non odio iusto.
@@ -80,23 +65,12 @@ const TabComponent = () => {
           </div>
 
           <div
-            className={` ${
-              Tabs === "tab3"
-                ? " scale-y-100 origin-top h-full duration-500 visible "
-                : " invisible h-0 scale-y-0 "
-            }
-             text-white font-exo   `}
+            className={` ${Tabs === "tab3" ? " block h-full " : " hidden h-0  "}
+             text-white font-exo  duration-300  `}
           >
             content3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Pariatur hic repellendus fugiat est quo! Veniam, necessitatibus! Ea
-            reprehenderit ex illo molestias voluptatum deserunt soluta. Nemo
-            voluptates, nobis optio vero ipsa itaque ratione in quis, provident
-            nam illo voluptatum fugit labore quod asperiores cum magni sequi.
-            Aliquid dignissimos odio, accusamus nam placeat soluta cum omnis
-            itaque sequi voluptatibus officiis minus temporibus quas aliquam
-            pariatur nihil explicabo? Obcaecati adipisci dolor dolore. At
-            accusamus earum cupiditate cum! Dolorum suscipit odit, facilis quos
-            iure velit qui, omnis praesentium veritatis doloremque aperiam!
+            reprehenderit is doloremque aperiam!
             Dolorum odit quia culpa necessitatibus eos maxime non odio iusto.
             Dolore, esse provident?
           </div>
