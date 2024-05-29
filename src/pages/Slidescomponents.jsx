@@ -38,11 +38,9 @@ const Slidescomponents = () => {
   };
   return (
     <section>
-      <div className=" max-w-[1140px] mt-5 mr-auto overflow-hidden">
-        <h2 className=" font-Exo text-3xl  text-black">SWIPER</h2>
-        <p className=" font-Exo text-2xl mt-2 pb-5 text-black">
-          coverflowEffect
-        </p>
+      <h2 className=" font-Exo text-3xl  text-black">SWIPER</h2>
+      <p className=" font-Exo text-2xl mt-2 pb-5 text-black">coverflowEffect</p>
+      <div className=" max-w-[1440px] mt-5 mx-auto overflow-hidden">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -58,7 +56,8 @@ const Slidescomponents = () => {
           }}
           pagination={{ clickable: true }}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper  w-full py-[50px]">
+          className="mySwiper  w-full py-[50px]"
+        >
           <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-1.jpg"
@@ -116,8 +115,10 @@ const Slidescomponents = () => {
             />
           </SwiperSlide>
         </Swiper>
-        <h2 className=" font-Exo text-3xl mt-5  text-white">SLICK SLIDER</h2>
-        <p className=" font-Exo text-2xl mt-2 pb-5 text-white">Simple</p>
+      </div>
+      <h2 className=" font-Exo text-3xl mt-5  text-black">SLICK SLIDER</h2>
+      <p className=" font-Exo text-2xl mt-2 pb-5 text-black">Simple</p>
+      <div className="max-w-[1440px] mt-5 mx-auto overflow-hidden">
         <Slider {...settings} ref={slider} className="overflow-hidden">
           <div>
             <div className="px-3">
