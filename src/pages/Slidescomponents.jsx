@@ -38,7 +38,7 @@ const Slidescomponents = () => {
   };
   return (
     <section>
-      <h2 className=" font-Exo text-3xl  text-black">SWIPER</h2>
+      <h2 className=" font-Exo text-3xl text-black">SWIPER</h2>
       <p className=" font-Exo text-2xl mt-2 pb-5 text-black">coverflowEffect</p>
       <div className=" max-w-[1440px] mt-5 mx-auto overflow-hidden">
         <Swiper
@@ -58,56 +58,56 @@ const Slidescomponents = () => {
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper  w-full py-[50px]"
         >
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-1.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-2.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-3.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-4.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-5.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-6.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-7.jpg"
               className="w-full"
               alt="slide"
             />
           </SwiperSlide>
-          <SwiperSlide className=" bg-center bg-cover !w-[300px] !h-[300px]">
+          <SwiperSlide className="bg-center bg-cover !w-[300px] !h-[300px]">
             <img
               src="https://swiperjs.com/demos/images/nature-8.jpg"
               className="w-full"
@@ -116,8 +116,8 @@ const Slidescomponents = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <h2 className=" font-Exo text-3xl mt-5  text-black">SLICK SLIDER</h2>
-      <p className=" font-Exo text-2xl mt-2 pb-5 text-black">Simple</p>
+      <h2 className="font-Exo text-3xl mt-5 text-black">SLICK SLIDER</h2>
+      <p className="font-Exo text-2xl mt-2 pb-5 text-black">Simple</p>
       <div className="max-w-[1440px] mt-5 mx-auto overflow-hidden">
         <Slider {...settings} ref={slider} className="overflow-hidden">
           <div>
@@ -179,13 +179,13 @@ const Slidescomponents = () => {
         <div className=" flex gap-4 items-center my-5">
           <button
             onClick={() => slider?.current?.slickPrev()}
-            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-black rounded-3xl"
+            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3 py-2 bg-black rounded-3xl"
           >
             Prev
           </button>
           <button
             onClick={() => slider?.current?.slickNext()}
-            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-black rounded-3xl"
+            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3 py-2 bg-black rounded-3xl"
           >
             Next
           </button>

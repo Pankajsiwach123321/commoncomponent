@@ -9,17 +9,19 @@ import AccordionComponents from './pages/AccordionComponents';
 import SlideBar from './components/SideBar';
 function App() {
   return (
-    <div className='md:min-h-screen flex flex-col bg-white'>
+    <div className='min-h-screen flex flex-col bg-white'>
       <div className='flex max-md:flex-col grow'>
         <SlideBar />
-        <div className='md:pl-[207px]  max-md:mb-[82px] md:pe-10 max-md:px-3 lg:pl-[301px] grow w-full'>
+        <div className='flex flex-col grow w-full'>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<TabComponent />} />
-            <Route path="/accordion" element={<AccordionComponents />} />
-            <Route path="/slider" element={<Slidescomponents />} />
-            <Route path="/from" element={<FormValidation />} />
-          </Routes>
+          <div className='bg-[#F5F5F5] max-md:pb-12 h-full md:pl-[207px] pt-[124px] md:pe-10 max-md:px-3 grow lg:pl-[301px]'>
+            <Routes>
+              <Route path="/" element={<TabComponent />} />
+              <Route path="/accordion" element={<AccordionComponents />} />
+              <Route path="/slider" element={<Slidescomponents />} />
+              <Route path="/from" element={<FormValidation />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </div>

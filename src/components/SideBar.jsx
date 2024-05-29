@@ -1,21 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NavData } from "./common/Helper";
-import { Slider_Bar } from "./common/Hooks";
 import logo from "../assets/svg/logo.svg";
 const SlideBar = () => {
   const location = useLocation();
-  const [sideBar, setsideBar] = Slider_Bar();
   return (
     <div className="md:min-h-screen fixed z-20 bg-white w-full max-h-max max-md:bottom-0 md:w-[171px] lg:w-[253px]  ">
       <img src={logo} alt="logo" className="w-full max-md:hidden px-6" />
-      <ul
-        className={`${sideBar} flex w-full md:flex-col pt-2 max-md:px-4  gap-3 md:gap-5 md:h-full`}
-      >
+      <ul className=" flex  w-full md:flex-col  max-md:px-4  gap-3 md:gap-5 md:h-full">
         {NavData.map((obj, index) => (
-          <li key={index} className="w-full mt-4">
+          <li key={index} className="w-full md:mt-4">
             <Link
-              onClick={() => setsideBar(!sideBar)}
               to={obj.to}
               className={`${
                 location.pathname === `${obj.to}` &&

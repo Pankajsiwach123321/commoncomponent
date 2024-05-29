@@ -5,26 +5,26 @@ const FormValidation = () => {
     name: "",
     number: "",
     password: "",
-    confirmpassword: "",
+    confirmPassword: "",
   });
-  const [Fromerror, setFromerror] = useState({
+  const [fromError, setFromError] = useState({
     name: "",
     number: "",
     password: "",
-    confirmpassword: "",
+    confirmPassword: "",
   });
-  const inputCon = (e) => {
+  const onInputFill = (e) => {
     const { name, value } = e.target;
     setFormdata({ ...formdata, [name]: value });
   };
-  const clg = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     const regex = {
       name: /^[a-zA-Z\s]+$/,
       number: /^\d{10}$/,
       password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@])[a-zA-Z\d@]{8,}$/,
-      confirmpassword:
+      confirmPassword:
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@])[a-zA-Z\d@]{8,}$/,
     };
     const error = {};
@@ -35,81 +35,81 @@ const FormValidation = () => {
       error.number = "invaild number";
     }
     if (!regex.password.test(formdata.password)) {
-      error.password = "invaild password";
+      error.password =
+        "must be contain 1 CapitalLetter , 1 symbol ,1 number or minimum 8 digit !";
     }
-    if (!regex.confirmpassword.test(formdata.confirmpassword)) {
-      error.confirmpassword = "invaild confirmPassword";
+    if (!regex.confirmPassword.test(formdata.confirmPassword)) {
+      error.confirmPassword =
+        "must be contain 1 CapitalLetter , 1 symbol ,1 number or minimum 8 digit !  ";
     }
-    if (formdata.password !== formdata.confirmpassword) {
-      error.confirmpassword = "Passwords do not match.";
+    if (formdata.password !== formdata.confirmPassword) {
+      error.confirmPassword = "Passwords do not match.";
     }
-    setFromerror(error);
+    setFromError(error);
     if (Object.keys(error).length === 0) {
       setFormdata({
         name: "",
         number: "",
         password: "",
-        confirmpassword: "",
+        confirmPassword: "",
       });
-      setFromerror({
+      setFromError({
         name: "",
         number: "",
         password: "",
-        confirmpassword: "",
+        confirmPassword: "",
       });
       console.log(formdata);
     }
   };
   return (
-    <div className="flex-grow items-center flex ">
-      <div
-        className={`border rounded-xl blur-0 p-10 w-full    duration-300  inline-block`}
-      >
-        <h1 className="text-black mb-3 font-black text-center font-Exo  text-3xl">
+    <div className="flex-grow items-center flex">
+      <div className="border rounded-xl blur-0 p-10 w-full duration-300 inline-block">
+        <h1 className="text-black mb-3 font-black text-center font-Exo text-3xl">
           Form Validation
         </h1>
-        <form className=" flex-col  flex gap-3" onSubmit={clg}>
+        <form className="flex-col flex gap-3" onSubmit={onSubmit}>
           <input
-            onChange={inputCon}
+            onChange={onInputFill}
             type="text"
             placeholder="name"
             name="name"
             value={formdata.name}
             className="border-2 rounded-md capitalize font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
-          {Fromerror.name && <p className=" text-red-700">{Fromerror.name}</p>}
+          {fromError.name && <p className="text-red-700">{fromError.name}</p>}
           <input
-            onChange={inputCon}
+            onChange={onInputFill}
             type="number"
             placeholder="number"
             name="number"
             value={formdata.number}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
-          {Fromerror.number && (
-            <p className=" text-red-700">{Fromerror.number}</p>
+          {fromError.number && (
+            <p className="text-red-700">{fromError.number}</p>
           )}
           <input
-            onChange={inputCon}
+            onChange={onInputFill}
             type="password"
             placeholder="password"
             name="password"
             value={formdata.password}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
-          {Fromerror.password && (
-            <p className=" text-red-700">{Fromerror.password}</p>
+          {fromError.password && (
+            <p className="text-red-700">{fromError.password}</p>
           )}
           <input
-            onChange={inputCon}
+            onChange={onInputFill}
             type="password"
             placeholder="confirm password"
-            name="confirmpassword"
-            value={formdata.confirmpassword}
+            name="confirmPassword"
+            value={formdata.confirmPassword}
             className="border-2 rounded-md font-Exo placeholder:font-Exo p-2 border-blue-300 text-gray-900 outline-none"
           />
-          {Fromerror.confirmpassword && (
-            <p className=" text-red-700">{Fromerror.confirmpassword}</p>
+          {fromError.confirmPassword && (
+            <p className="text-red-700">{fromError.confirmPassword}</p>
           )}
 
           <input

@@ -17,8 +17,8 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header>
-      <nav className="bg-white py-5 sticky top-0">
+    <header className=" fixed top-0 right-0 left-0 z-[19]">
+      <nav className="bg-white md:pl-[207px] md:pe-10 max-md:px-3 lg:pl-[301px] py-5 sticky top-0">
         <div className=" flex justify-between gap-3 items-center">
           <ul>
             <li>
