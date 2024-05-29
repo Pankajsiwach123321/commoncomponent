@@ -10,53 +10,39 @@ const NavBar = () => {
     const tl = gsap.timeline();
     tl.fromTo(
       ".navlink",
-      { y: "-200%", duration: 0.2 },
+      { y: "-250%", duration: 0.2 },
       { y: 0, duration: 0.2, stagger: 0.2 },
-      "+=2"
     );
   }, []);
 
   return (
-    <header className=" fixed top-0 right-0 left-0 z-[19]">
+    <header className="fixed top-0 right-0 left-0 z-[19]">
       <nav className="bg-white md:pl-[207px] md:pe-10 max-md:px-3 lg:pl-[301px] py-5 sticky top-0">
-        <div className=" flex justify-between gap-3 items-center">
+        <div className="flex justify-between gap-3 items-center">
           <ul>
             <li>
               <a href="#">
-                <h2 className=" font-Poppins font-bold text-base sm:text-2xl sm:leading-9 text-black">
+                <h2 className=" navlink font-Poppins font-bold text-base sm:text-2xl sm:leading-9 text-black">
                   Hi Stéphane
                 </h2>
-                <p className=" font-Poppins font-medium text-sm sm:text-base sm:leading-6">
+                <p className="font-Poppins font-medium text-sm sm:text-base sm:leading-6">
                   Lass uns heute den Umsatz überprüfen!
                 </p>
               </a>
             </li>
           </ul>
           <ul className="flex items-center gap-3 sm:gap-5">
-            {/* {NavData.map((obj, index) => (
-                <li key={index} className="navlink">
-                  <Link
-                    to={obj.to}
-                    className={`${
-                      location.pathname === `${obj.to}` &&
-                      "webkitstrokes  after:!w-full"
-                    } font-Exo relative after:absolute after:bg-[#b1ff57]  after:bottom-[-6px] after:w-0 after:left-0 after:duration-300 after:h-[3px] text-lg leading-normal font-normal  text-white  webkitstroke`}
-                  >
-                    {obj.title}
-                  </Link>
-                </li>
-              ))} */}
-            <li>
+            <li className="navlink">
               <Link>
                 <Message />
               </Link>
             </li>
-            <li>
+            <li className="navlink">
               <Link>
                 <Notification />
               </Link>
             </li>
-            <li>
+            <li className="navlink">
               <Link>
                 <Profile />
               </Link>
