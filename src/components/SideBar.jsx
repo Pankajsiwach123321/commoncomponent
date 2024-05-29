@@ -12,11 +12,21 @@ const SlideBar = () => {
       { y: "-300%", duration: 0.2 },
       { y: 0, duration: 0.2, stagger: 0.2 }
     );
-    tl.fromTo(
-      ".navtab",
-      { x: "-300%", duration: 0.2 },
-      { x: 0, duration: 0.2, stagger: 0.2 }
-    );
+    const width = window.innerWidth;
+    console.log(width);
+    if (width > 767.9) {
+      tl.fromTo(
+        ".navtab",
+        { x: "-300%", duration: 0.2 },
+        { x: 0, duration: 0.2, stagger: 0.2 }
+      );
+    } else {
+      tl.fromTo(
+        ".navtab",
+        { y: "300%", duration: 0.2 },
+        { y: 0, duration: 0.2, stagger: 0.2 }
+      );
+    }
   }, []);
   return (
     <div className="md:min-h-screen fixed z-20 bg-white w-full max-h-max max-md:bottom-0 md:w-[171px] lg:w-[253px]">
