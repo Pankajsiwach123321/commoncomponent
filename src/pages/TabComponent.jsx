@@ -7,38 +7,38 @@ const TabComponent = () => {
   }
   return (
     <section className="mt-10">
-      <div className="max-w-[1140px] mx-auto px-3">
+      <div className=" px-3">
         <div>
-          <div className=" flex gap-2 sm:gap-5 items-center mb-5">
+          <div className="flex gap-2 sm:gap-5 items-center mb-5">
             <button
               onClick={() => changetab("tab1")}
               className={`${
-                Tabs === "tab1" && "text-red-400"
-              } text-black text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-white rounded-3xl`}
+                Tabs === "tab1" && "!text-red-400"
+              } text-white duration-300 text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-black rounded-3xl`}
             >
               About
             </button>
             <button
               onClick={() => changetab("tab2")}
               className={`${
-                Tabs === "tab2" && "text-red-400"
-              } text-black text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-white rounded-3xl`}
+                Tabs === "tab2" && "!text-red-400"
+              } text-white duration-300 text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-black rounded-3xl`}
             >
               Blog
             </button>
             <button
               onClick={() => changetab("tab3")}
               className={`${
-                Tabs === "tab3" && "text-red-400"
-              } text-black text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-white rounded-3xl`}
+                Tabs === "tab3" && "!text-red-400"
+              } text-white duration-300 text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-black rounded-3xl`}
             >
               Suggestion
             </button>
           </div>
           <div
-            className={` ${
-              Tabs === "tab1" ? " block h-full " : " hidden h-0  "
-            } text-white font-exo duration-300
+            className={`${
+              Tabs === "tab1" ? " block h-full" : "hidden h-0"
+            } text-black font-exo duration-300
                 `}
           >
             content1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -51,7 +51,7 @@ const TabComponent = () => {
 
           <div
             className={` ${Tabs === "tab2" ? " block h-full " : " hidden h-0  "}
-               text-white font-exo duration-300 `}
+               text-black font-exo duration-300 `}
           >
             content2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Pariatur hic repellendus fugiat est quo! Veniam, necessitatibus! Ea
@@ -66,7 +66,7 @@ const TabComponent = () => {
 
           <div
             className={` ${Tabs === "tab3" ? " block h-full " : " hidden h-0  "}
-             text-white font-exo  duration-300  `}
+             text-black font-exo  duration-300  `}
           >
             content3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Pariatur hic repellendus fugiat est quo! Veniam, necessitatibus! Ea

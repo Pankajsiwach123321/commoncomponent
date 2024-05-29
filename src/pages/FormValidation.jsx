@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const FormValidation = () => {
-  const [pop, setPop] = useState(false);
   const [formdata, setFormdata] = useState({
     name: "",
     number: "",
@@ -58,17 +57,15 @@ const FormValidation = () => {
         password: "",
         confirmpassword: "",
       });
-      setPop(true);
+      console.log(formdata);
     }
   };
   return (
     <div className="flex-grow items-center flex ">
       <div
-        className={`${
-          pop ? " blur-lg" : "blur-0"
-        } border rounded-xl p-10 w-full max-w-[900px] mx-auto  duration-300  inline-block`}
+        className={`border rounded-xl blur-0 p-10 w-full    duration-300  inline-block`}
       >
-        <h1 className="text-white mb-3 font-black text-center font-Exo  text-3xl">
+        <h1 className="text-black mb-3 font-black text-center font-Exo  text-3xl">
           Form Validation
         </h1>
         <form className=" flex-col  flex gap-3" onSubmit={clg}>
@@ -116,23 +113,10 @@ const FormValidation = () => {
           )}
 
           <input
-            className="text-black font-Exo cursor-pointer text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-white rounded-3xl mt-5 hover:text-red-400 duration-300"
+            className="text-white font-Exo cursor-pointer text-xl font-bold font-exo  sm:px-6 px-3 sm:py-3 py-2 bg-black rounded-3xl mt-5 hover:text-red-400 duration-300"
             type="submit"
           />
         </form>
-      </div>
-      <div
-        className={` ${
-          pop ? "scale-1" : "scale-0"
-        } p-10 translate-x-[-50%]  duration-300 translate-y-[-50%] bg-slate-800 absolute left-[50%] top-[50%] mt-5 border-blue-700 border-2`}
-      >
-        <p className=" text-green-500">Login successfully !!!!!</p>
-        <button
-          onClick={() => setPop(false)}
-          className="text-green-500 mx-auto flex mt-5"
-        >
-          X
-        </button>
       </div>
     </div>
   );

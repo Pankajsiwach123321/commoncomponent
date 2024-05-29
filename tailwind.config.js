@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -6,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'Exo': '"Exo 2", sans- serif',
+        'Poppins': '"Poppins", sans-serif',
       }
     },
   },

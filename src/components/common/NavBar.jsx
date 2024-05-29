@@ -1,13 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
-import SlideBar from "../SideBar";
-import { NavData } from "./Helper";
-import { Slider_Bar } from "./Hooks";
+import { Link } from "react-router-dom";
+// import { NavData } from "./Helper";
 import { useEffect } from "react";
 import gsap from "gsap";
+import { Message, Notification, Profile } from "./icon";
 
 const NavBar = () => {
-  const location = useLocation();
-  const [sideBar, setsideBar] = Slider_Bar();
+  // const location = useLocation();
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -20,33 +18,22 @@ const NavBar = () => {
 
   return (
     <header>
-      <nav className="bg-black py-5 sticky top-0">
-        <div className="max-w-[1140px] mx-auto px-3">
-          <div className=" flex justify-between items-center">
-            <button
-              className={` ${
-                sideBar && "opacity-0"
-              } flex duration-300 gap-1 flex-col`}
-              onClick={() => setsideBar(!sideBar)}
-            >
-              <span
-                className={` ${
-                  sideBar && "translate-x-[1px] translate-y-[8px] rotate-45"
-                } w-5 bg-white h-[2px] block duration-300`}
-              ></span>
-              <span
-                className={` ${
-                  sideBar && "opacity-0"
-                } w-5 bg-white h-[2px] block duration-300`}
-              ></span>
-              <span
-                className={` ${
-                  sideBar && "translate-x-[2px] translate-y-[-3px] -rotate-45"
-                } w-5 bg-white h-[2px] block duration-300`}
-              ></span>
-            </button>
-            <ul className="flex items-center max-sm:hidden gap-5">
-              {NavData.map((obj, index) => (
+      <nav className="bg-white py-5 sticky top-0">
+        <div className=" flex justify-between gap-3 items-center">
+          <ul>
+            <li>
+              <a href="#">
+                <h2 className=" font-Poppins font-bold text-base sm:text-2xl sm:leading-9 text-black">
+                  Hi Stéphane
+                </h2>
+                <p className=" font-Poppins font-medium text-sm sm:text-base sm:leading-6">
+                  Lass uns heute den Umsatz überprüfen!
+                </p>
+              </a>
+            </li>
+          </ul>
+          <ul className="flex items-center gap-3 sm:gap-5">
+            {/* {NavData.map((obj, index) => (
                 <li key={index} className="navlink">
                   <Link
                     to={obj.to}
@@ -58,44 +45,25 @@ const NavBar = () => {
                     {obj.title}
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+              ))} */}
+            <li>
+              <Link>
+                <Message />
+              </Link>
+            </li>
+            <li>
+              <Link>
+                <Notification />
+              </Link>
+            </li>
+            <li>
+              <Link>
+                <Profile />
+              </Link>
+            </li>
+          </ul>
         </div>
       </nav>
-      <aside
-        className={`${
-          sideBar && "!left-0"
-        } px-10 pt-20 bg-white min-h-screen flex fixed top-0 left-[-400px] z-[3] duration-300`}
-      >
-        <button
-          className=" flex absolute right-5 top-5 gap-1 flex-col"
-          onClick={() => setsideBar(!sideBar)}
-        >
-          <span
-            className={` ${
-              sideBar && "translate-x-[1px] translate-y-[8px] rotate-45"
-            } w-[30px] bg-black h-[2px] block duration-300`}
-          ></span>
-          <span
-            className={` ${
-              sideBar && "opacity-0"
-            } w-[30px] bg-black h-[2px] block duration-300`}
-          ></span>
-          <span
-            className={` ${
-              sideBar && "translate-x-[2px] translate-y-[-3px] -rotate-45"
-            } w-[30px] bg-black h-[2px] block duration-300`}
-          ></span>
-        </button>
-        <SlideBar />
-      </aside>
-      <div
-        onClick={() => setsideBar(false)}
-        className={`${
-          sideBar && "!left-0"
-        } w-full min-h-screen bg-[#0c0c0c6d] -left-full inset-0 fixed z-[2]`}
-      ></div>
     </header>
   );
 };

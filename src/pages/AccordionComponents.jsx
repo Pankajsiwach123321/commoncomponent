@@ -1,31 +1,28 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { accordioData } from "../components/common/Helper";
 
 const AccordionComponents = () => {
-  const [accordion, setAccordion] = useState(false);
+  const [accordion, setAccordion] = useState(0);
   const showContent = (index) => {
-    setAccordion(index);
-    if (accordion === index) {
-      setAccordion(false);
-    }
+    setAccordion(accordion === index ? -1 : index);
   };
   return (
     <section className="flex-grow items-center flex ">
-      <div className="max-w-[1140px] mx-auto px-1">
+      <div className=" px-1">
         <div className="accordion bg-white rounded-xl py-5 px-6 border-[#d0fc9a] border-[6px]">
           {accordioData.map((obj, index) => (
             <div
               key={index}
-              className="accordion-items mb-5 border  px-3  py-3  border-black  rounded-xl"
+              className="accordion-items mb-5 border    border-black  rounded-xl"
             >
               <button
                 onClick={() => showContent(index)}
-                className="accordion-heading  flex justify-between gap-5 w-full items-center "
+                className="accordion-heading  px-3  py-3 flex justify-between gap-5 w-full items-center "
               >
                 <h2
                   className={`${
                     accordion === index && "text-[#57ff9a]"
-                  } text-black font-bold text-xl duration-300 font-Exo`}
+                  } text-black text-start font-bold text-xl duration-300 font-Exo`}
                 >
                   {obj.title}
                 </h2>
@@ -40,8 +37,10 @@ const AccordionComponents = () => {
               </button>
               <div
                 className={`${
-                  accordion === index ? "max-h-[528px] " : "max-h-0 "
-                } accrdion-heading overflow-hidden  pr-10   !duration-300 transition-[max-height]`}
+                  accordion === index
+                    ? "max-h-[600px] pb-3 !duration-300"
+                    : "max-h-0"
+                } accrdion-heading   px-3  overflow-hidden  pr-10    !duration-300 transition-all`}
               >
                 <p className="text-black  font-normal text-base font-Exo">
                   {obj.content}

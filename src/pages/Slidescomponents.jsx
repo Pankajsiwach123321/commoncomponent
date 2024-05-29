@@ -38,9 +38,9 @@ const Slidescomponents = () => {
   };
   return (
     <section>
-      <div className=" max-w-[1140px] mt-20 mx-auto overflow-hidden">
-        <h2 className=" font-Exo text-3xl mt-5 text-white">SWIPER</h2>
-        <p className=" font-Exo text-2xl mt-2 pb-5 text-white">
+      <div className=" max-w-[1140px] mt-5 mr-auto overflow-hidden">
+        <h2 className=" font-Exo text-3xl  text-black">SWIPER</h2>
+        <p className=" font-Exo text-2xl mt-2 pb-5 text-black">
           coverflowEffect
         </p>
         <Swiper
@@ -178,13 +178,13 @@ const Slidescomponents = () => {
         <div className=" flex gap-4 items-center my-5">
           <button
             onClick={() => slider?.current?.slickPrev()}
-            className="text-black text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-white rounded-3xl"
+            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-black rounded-3xl"
           >
             Prev
           </button>
           <button
             onClick={() => slider?.current?.slickNext()}
-            className="text-black text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-white rounded-3xl"
+            className="text-white text-xl font-bold font-exo hover:text-red-600 duration-300  sm:px-6 px-3  py-2 bg-black rounded-3xl"
           >
             Next
           </button>
