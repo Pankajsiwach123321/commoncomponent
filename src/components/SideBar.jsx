@@ -35,21 +35,23 @@ const SlideBar = () => {
         alt="logo"
         className="w-full navlink max-md:hidden px-6"
       />
-      <ul className="flex  w-full md:flex-col max-md:px-4 gap-3 md:gap-5 md:h-full">
-        {NavData.map((obj, index) => (
-          <li key={index} className="w-full md:mt-4 navtab">
-            <Link
-              to={obj.to}
-              className={`${
-                location.pathname === `${obj.to}` &&
-                "after:w-full md:after:h-full bg-[#FEF8F3] text-[#EC6707] after:!right-0 md:after:!bottom-0"
-              } font-Poppins py-3 duration-300 max-md:text-center md:pl-[32px]  w-full inline-block relative after:absolute after:bg-[#EC6707] after:bottom-1 md:after:bottom-[50%] after:w-0 md:after:w-1 after:rounded-lg after:right-[50%] md:after:right-0 after:duration-300 after:h-1 md:after:h-0 text-sm leading-[21px] font-medium text-black`}
-            >
-              {obj.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="overflow-y-scroll whitespace-nowrap scrollbar-hidden h-full max-h-screen ">
+        <ul className="flex  w-full md:flex-col !min-h-[500px] max-md:px-4 gap-3 md:gap-5 ">
+          {NavData.map((obj, index) => (
+            <li key={index} className="w-full md:mt-4 navtab ">
+              <Link
+                to={obj.to}
+                className={`${
+                  location.pathname === `${obj.to}` &&
+                  "after:w-full md:after:h-full bg-[#FEF8F3] text-[#EC6707] after:!right-0 md:after:!bottom-0"
+                } font-Poppins py-3 duration-300 max-md:text-center md:pl-[32px]  w-full inline-block relative after:absolute after:bg-[#EC6707] after:bottom-1 md:after:bottom-[50%] after:w-0 md:after:w-1 after:rounded-lg after:right-[50%] md:after:right-0 after:duration-300 after:h-1 md:after:h-0 text-sm leading-[21px] font-medium text-black`}
+              >
+                {obj.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
