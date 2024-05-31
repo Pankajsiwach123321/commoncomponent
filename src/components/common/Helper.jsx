@@ -1,19 +1,30 @@
+import { AccordionIcon, FromIcon, SliderIcon, TabsIcon } from "./icon";
+
 export const NavData = [
   {
-    title: "TABS",
+    icon: <TabsIcon />,
+    title: "Tabs",
     to: "/",
   },
   {
-    title: "ACCORDION",
+    icon: <AccordionIcon />,
+    title: "Accordion",
     to: "/accordion",
   },
   {
-    title: "SLIDER",
+    icon: <SliderIcon />,
+    title: "Slider",
     to: "/slider",
   },
   {
-    title: "FORM",
+    icon: <FromIcon />,
+    title: "Form",
     to: "/from",
+  },
+  {
+    icon: <FromIcon />,
+    title: "Gsap",
+    to: "/gsap",
   },
 ];
 export const accordioData = [

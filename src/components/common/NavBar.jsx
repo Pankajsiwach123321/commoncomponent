@@ -22,7 +22,7 @@ const NavBar = () => {
           <ul>
             <li>
               <a href="#">
-                <h2 className=" navlink font-Poppins font-bold text-base sm:text-2xl sm:leading-9 text-black">
+                <h2 className=" navlink font-Poppins mb-1 font-bold text-base sm:text-2xl sm:leading-9 text-black">
                   Hi Stéphane
                 </h2>
                 <p className="font-Poppins font-medium text-sm sm:text-base sm:leading-6">
