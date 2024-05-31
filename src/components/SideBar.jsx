@@ -27,10 +27,11 @@ const SlideBar = () => {
         { y: "300%", duration: 0.2 },
         { y: 0, duration: 0.2, stagger: 0.2 }
       );
+     
     }
   }, []);
   return (
-    <div className="md:h-screen flex flex-col fixed z-20 bg-white w-full max-h-max max-md:bottom-0 md:w-[171px] lg:w-[253px]">
+    <div className="md:h-screen  flex flex-col fixed z-20 bg-white w-full max-h-max max-md:bottom-0 md:w-[171px] lg:w-[253px]">
       <img
         src={logo}
         alt="logo"
@@ -53,7 +54,7 @@ const SlideBar = () => {
             </li>
           ))}
         </ul>
-        <div className="bg-white sm:bg-[#F5F5F5] rounded-xl border border-dashed border-[#DEDEDE] mx-2 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden md:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear cursor-pointer">
+        <div className="bg-white navcard sm:bg-[#F5F5F5] rounded-xl border border-dashed border-[#DEDEDE] mx-2 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden md:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear cursor-pointer">
           <div className="bg-[#EC6707] rounded-[39px] w-10 h-10 flex justify-center items-center mx-auto">
             <PulseIcon />
           </div>

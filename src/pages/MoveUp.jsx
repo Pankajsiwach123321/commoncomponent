@@ -29,21 +29,21 @@ const MoveUp = () => {
 
   return (
     <>
-      <section className="px-3 flex max-2xl:hidden gallery">
+      <section className="px-3 flex gallery">
         <div className="w-[50%]">
           <div>
             <div className=" flex justify-center flex-col min-h-screen">
-              <h2 className=" text-5xl text-gray-500 font-Poppins font-bold">
+              <h2 className=" 2xl:text-5xl md:text-2xl text-base text-gray-500 font-Poppins font-bold">
                 BRAND PRODUCT
               </h2>
             </div>
             <div className=" flex justify-center flex-col min-h-screen">
-              <h2 className=" text-5xl text-gray-500 font-Poppins font-bold">
+              <h2 className=" 2xl:text-5xl md:text-2xl text-base text-gray-500 font-Poppins font-bold">
                 BRAND PRODUCT
               </h2>
             </div>
             <div className=" flex justify-center flex-col min-h-screen">
-              <h2 className=" text-5xl text-gray-500 font-Poppins font-bold">
+              <h2 className=" 2xl:text-5xl md:text-2xl text-base text-gray-500 font-Poppins font-bold">
                 BRAND PRODUCT
               </h2>
             </div>
@@ -75,7 +75,7 @@ const MoveUp = () => {
           </div>
         </div>
       </section>
-      <section className=" min-h-screen max-2xl:hidden"></section>
+      <section className=" min-h-screen"></section>
     </>
   );
 };

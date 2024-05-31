@@ -1,4 +1,4 @@
-import { AccordionIcon, FromIcon, SliderIcon, TabsIcon } from "./icon";
+import { AccordionIcon, FromIcon, GsapIcon, SliderIcon, TabsIcon } from "./icon";
 
 export const NavData = [
   {
@@ -22,7 +22,7 @@ export const NavData = [
     to: "/from",
   },
   {
-    icon: <FromIcon />,
+    icon: <GsapIcon />,
     title: "Gsap",
     to: "/gsap",
   },

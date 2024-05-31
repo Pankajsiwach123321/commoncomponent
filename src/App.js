@@ -15,7 +15,7 @@ function App() {
         <SlideBar />
         <div className='flex flex-col grow w-full'>
           <NavBar />
-          <div className='bg-[#F5F5F5] max-md:pb-12 h-full md:pl-[207px] mt-[124px] md:pe-10 max-md:px-3 grow lg:pl-[301px]'>
+          <div className='bg-[#F5F5F5] max-md:pb-12 h-full md:pl-[207px] pt-[124px] md:pe-10 max-md:px-3 grow lg:pl-[301px]'>
             <Routes>
               <Route path="/" element={<TabComponent />} />
               <Route path="/accordion" element={<AccordionComponents />} />
